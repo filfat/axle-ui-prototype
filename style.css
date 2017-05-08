@@ -5,9 +5,13 @@ html {
     padding: 0px;
     margin: 0px;
 
+    user-select: none;
     font-family: --apple-body, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     background: url('wallpaper.jpg');
+}
+* {
+    box-sizing: border-box;
 }
 
 .taskbar {
@@ -63,31 +67,72 @@ html {
 
 
 .window {
+    overflow: hidden;
     position: absolute;
     background: rgba(55, 55, 55, .65);
     box-shadow: 0px 0px 2px rgb(5, 5, 5);
+    resize: both;
 }
 .window .title {
     height: 35px;
-    width: calc(100% - 20px);
+    width: 100%;
     padding: 0px 10px;
 
     font-size: 16px;
     line-height: 35px;
     color: #fff;
+    user-select: none;
+    cursor: default;
 
+    background: rgba(105, 105, 105, .65);
+}
+.window.active .title {
     background: rgba(55, 55, 55, .65);
+}
+.window .title .action {
+    display: inline-block;
+    float: right;
+
+    padding: 0px 12px;
+
+    line-height: 35px;
+    cursor: default;
+}
+.window .title .action:hover {
+    background: rgba(145, 145, 145, .65);
 }
 .window .content {
     padding: 5px;
+    user-select: auto;
 }
 .window.terminal {
-    left: 8vw; top: 10vh;
+    left: 8vw; top: 18vh;
     width: 720px;
     height: 375px;
 
     color: lawngreen;
-    font-family: 'Consolas', sans-serif !important;
     line-height: 20px;
     font-size: 14px;
+}
+.window.terminal .content {
+    font-family: 'Consolas', sans-serif !important;
+}
+.window.notepad {
+    right: 32vw; top: 9vh;
+    width: 320px;
+    height: 420px;
+}
+.window.notepad textarea {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+    padding: 5px; margin: 0px;
+    resize: none;
+    
+    background: none;
+    border: none;
+    color: #fff;
+    text-align: left;
+    font-size: 18px;
 }

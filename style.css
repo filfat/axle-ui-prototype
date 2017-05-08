@@ -5,7 +5,7 @@ html {
     padding: 0px;
     margin: 0px;
 
-    font-family: --apple-body;
+    font-family: --apple-body, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     background: url('wallpaper.jpg');
 }
@@ -25,6 +25,7 @@ html {
     display: inline-block;
     height: 60px;
     padding: 10px 15px 10px 15px;
+    cursor: pointer;
 }
 .app.right {
     float: right;
@@ -80,7 +81,7 @@ html {
 .window .content {
     padding: 5px;
 }
-.window.demo {
+.window.terminal {
     left: 8vw; top: 10vh;
     width: 720px;
     height: 375px;

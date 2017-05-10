@@ -44,12 +44,13 @@ html {
 }
 
 .app-launcher {
+    z-index: 9999999;
     position: absolute;
-    right: -390px; top: 0px;
+    right: -360px; top: 0px;
 
-    width: 400px;
+    width: 375px;
     height: calc(100vh - 60px);
-    background: rgba(25, 25, 25, .65);
+    background: rgba(55, 55, 55, .95);
     transition: 250ms ease-in-out;
 }
 .app-launcher:hover {
@@ -104,6 +105,11 @@ html {
 .window .content {
     padding: 5px;
     user-select: auto;
+
+    width: 100%;
+    height: 100%;
+
+    background: #333;
 }
 .window.terminal {
     left: 8vw; top: 18vh;

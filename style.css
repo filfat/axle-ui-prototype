@@ -14,6 +14,9 @@ html {
     box-sizing: border-box;
 }
 
+
+/* Taskbar
+============================ */
 .taskbar {
     z-index: 99999;
     position: fixed;
@@ -27,6 +30,9 @@ html {
     background: rgba(55, 55, 55, .65);
 }
 
+
+/* Desktop Shortcuts
+============================ */
 .desktop {
     position: absolute;
     padding: 15px 0px;
@@ -43,6 +49,9 @@ html {
     margin: 0 15px;
 }
 
+
+/* App Icon
+============================ */
 .app {
     display: inline-block;
     height: 50px;
@@ -61,6 +70,9 @@ html {
     height: 30px;
 }
 
+
+/* App Launcher
+============================ */
 .app-launcher {
     z-index: 9999999;
     position: absolute;
@@ -93,6 +105,8 @@ html {
 }
 
 
+/* Window
+============================ */
 .window {
     overflow: hidden;
     position: absolute;
@@ -170,6 +184,9 @@ html {
     font-size: 18px;
 }
 
+
+/* Widget
+============================ */
 .widgets {
     z-index: -10;
     position: absolute;

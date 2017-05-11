@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>axle OS</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet"/>
         <link rel="stylesheet" href="style.css"/>
+
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
         <script src="app.js"></script>
     </head>
     <body>
         <main>
+            <div class="desktop">
+                <div class="file">
+                    <img class="icon" src="http://placehold.it/35x35"/>
+                    <span class="header">New Folder</span>
+                </div>
+                <div class="file">
+                    <img class="icon" src="http://placehold.it/35x35"/>
+                    <span class="header">New Folder (2)</span>
+                </div>
+            </div>
+
             <div class="window terminal active">
                 <div class="title">
                     <span>Terminal</span>
@@ -31,12 +46,34 @@
                     <textarea>Hello World!</textarea>
                 </div>
             </div>
+
+            <div class="widgets">
+                <div class="widget clock">11:23 PM</div>
+            </div>
         </main>
 
         <nav class="app-launcher">
+            <span class="header">Applications</span>
             <div class="app">
                 <img class="icon" src="http://placehold.it/35x35"/>
             </div>
+            <div class="app">
+                <img class="icon" src="http://placehold.it/35x35"/>
+            </div>
+            <div class="app">
+                <img class="icon" src="http://placehold.it/35x35"/>
+            </div>
+            <div class="app">
+                <img class="icon" src="http://placehold.it/35x35"/>
+            </div>
+            <div class="app">
+                <img class="icon" src="http://placehold.it/35x35"/>
+            </div>
+            <div class="app">
+                <img class="icon" src="http://placehold.it/35x35"/>
+            </div>
+
+            <span class="header">Notifications</span>
         </nav>
 
         <footer class="taskbar">

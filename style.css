@@ -6,7 +6,7 @@ html {
     margin: 0px;
 
     user-select: none;
-    font-family: --apple-body, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     background: url('wallpaper.jpg');
 }
@@ -15,19 +15,37 @@ html {
 }
 
 .taskbar {
-    position: absolute;
+    z-index: 99999;
+    position: fixed;
     bottom: 0px; left: 0px; right: 0px;
 
     width: 100vw;
-    height: 60px;
+    height: 50px;
     margin: 0 auto;
+    padding: 0px 15px 0px 0px;
 
     background: rgba(55, 55, 55, .65);
 }
 
+.desktop {
+    position: absolute;
+    padding: 15px 0px;
+}
+.desktop .file {
+    float: left;
+    width: 98px;
+
+    text-align: center;
+    font-size: 13px;
+}
+.desktop .file .icon {
+    width: 58px;
+    margin: 0 15px;
+}
+
 .app {
     display: inline-block;
-    height: 60px;
+    height: 50px;
     padding: 10px 15px 10px 15px;
     cursor: pointer;
 }
@@ -40,7 +58,7 @@ html {
 }
 .app .icon {
     display: block;
-    height: 40px;
+    height: 30px;
 }
 
 .app-launcher {
@@ -49,7 +67,7 @@ html {
     right: -360px; top: 0px;
 
     width: 375px;
-    height: calc(100vh - 60px);
+    height: 100vh;
     background: rgba(55, 55, 55, .95);
     transition: 250ms ease-in-out;
 }
@@ -65,6 +83,14 @@ html {
 .app-launcher .app .icon {
     height: 100%;
 }
+.app-launcher .header {
+    display: block;
+    padding: 25px 15px 5px 15px;
+
+    font-size: 22px;
+    font-weight: 300;
+    color: #fff;
+}
 
 
 .window {
@@ -79,8 +105,9 @@ html {
     width: 100%;
     padding: 0px 10px;
 
-    font-size: 16px;
+    font-size: 13px;
     line-height: 35px;
+    text-align: left;
     color: #fff;
     user-select: none;
     cursor: default;
@@ -109,7 +136,7 @@ html {
     width: 100%;
     height: 100%;
 
-    background: #333;
+    background: rgba(51, 51, 51, 0.85);
 }
 .window.terminal {
     left: 8vw; top: 18vh;
@@ -141,4 +168,19 @@ html {
     color: #fff;
     text-align: left;
     font-size: 18px;
+}
+
+.widgets {
+    z-index: -10;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+.widget.clock {
+    position: absolute;
+    right: 40px;
+    bottom: 70px;
+
+    font-size: 48px;
+    color: #fff;
 }
